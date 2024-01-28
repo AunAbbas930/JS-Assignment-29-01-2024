@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 29-01-2024</title>
+    <script>
+        function WelcomeMessage() {
+            alert('Welcome Dear Visitor, Please proceed!');
+        }
+        
+        function ErrorMessage() {
+            var errorMessageElement = document.getElementById('wrong-password');
+            errorMessageElement.style.display = 'block';
+        }
+        
+        window.onload = WelcomeMessage;
+    </script>
+</head>
+<body>
+    <a href="index.html"><input type="button" value="Back"></a>
+    <h1>This page is designed to show an alert message</h1>
+    <p>Enter a wrong password to proceed (there is no true one):</p>
+      <label>Password:&emsp;
+      <input type="password" name="password" value="12345">
+      <br>
+      <input type="button" value="Enter" onclick="ErrorMessage()">
+      </label>
+      <br><br>
+    <div id="wrong-password" style="display:none;">
+          <p>Error! Please Enter a valid password.</p>
+          <input type="button" value="Proceed without password" onclick="window.location.href:'q03.html'">
+    </div>
+</body>
+</html>
